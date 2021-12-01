@@ -47,7 +47,7 @@ class(my_new_vector)
 # Data from from socviz library
 titanic
 class(titanic)
-titanic$percent
+clastitanic$percent
 
 
 # Converting to a tidyverse tibble
@@ -64,11 +64,6 @@ str(my_summary)
 # ggplot() simple example
 ggplot(data = mpg, aes(x = displ, y = hwy)) + 
   geom_point()
-
-# How NOT to continue a line...
-
-ggplot(data = mpg, aes(x = displ, y = hwy))
-+ geom_point()
 
 
 ## 2.5 Get Data into R

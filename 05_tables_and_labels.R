@@ -6,6 +6,8 @@ library(here)
 library(tidyverse)
 library(socviz)
 
+view(gapminder)
+
 
 ## ----pipeline-------------------------------------------------------
 

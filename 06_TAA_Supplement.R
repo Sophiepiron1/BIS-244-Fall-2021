@@ -11,6 +11,8 @@ library(socviz)
 
 View(gss_sm)
 str(gss_sm)
+?str()
+
 
 # Quick review: have previously used both geom_smooth() and geom_point()
 
@@ -28,6 +30,7 @@ p + geom_bar()
 # Default y-dimension is count, but can specify others:
 
 p + geom_bar(mapping = aes(y = ..prop..))
+
 
 # ..prop.. is a temporary variable, and defaults to the proportion of each x "group"
 
@@ -63,7 +66,7 @@ p + geom_bar() + guides(fill = FALSE)
 
 p <- ggplot(data = gss_sm,
             mapping = aes(x = bigregion, 
-                          fill = religion))
+                         fill=religion ))
 p + geom_bar()
 
 # Note that, here, we DO need a legend
@@ -81,7 +84,8 @@ p + geom_bar(position = "dodge",
 
 p <- ggplot(data = gss_sm,
             mapping = aes(x = bigregion, 
-                          fill = religion))
+                          ))
+p + geom_bar(0)
 p + geom_bar(position = "dodge",
              mapping = aes(y = ..prop.., 
                            group = religion))       
